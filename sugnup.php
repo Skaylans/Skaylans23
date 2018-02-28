@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/sug.css">
     <link rel="stylesheet" href="/css/font-awesome.css">
-    <title>CSS3 дизайн формы</title>
+    <title>Страхование жизни</title>
   </head>
   <body>
     <div class="container">
