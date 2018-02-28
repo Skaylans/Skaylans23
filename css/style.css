@@ -1,5 +1,5 @@
 body {
-  background-image: url("/img/sergei-akulich-284539.jpg");
+  background: url("/img/sergei-akulich-284539.jpg") 100%;
 }
 
 a {
