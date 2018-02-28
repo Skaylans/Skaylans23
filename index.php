@@ -40,7 +40,7 @@ if (!isset($_COOKIE['user_id'])) {
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/font-awesome.css">
-    <title>CSS3 дизайн формы</title>
+    <title>Страхование жизни</title>
   </head>
   <body>
     <div class="container">
