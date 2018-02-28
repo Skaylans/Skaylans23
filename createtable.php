@@ -8,13 +8,13 @@ $pass = "Qwerty123456";
 try {
     $conn = new PDO($dsn, $login, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "CREATE TABLE registration_tab(
+        $sql = "CREATE TABLE users(
         id INT NOT NULL IDENTITY(1,1), 
         PRIMARY KEY(id),
-        name VARCHAR(30),
-        email VARCHAR(30),
-        gender VARCHAR(10),
-        reg_date DATE)";
+        username VARCHAR(50),
+        password VARCHAR(50),
+        email VARCHAR(50),
+        birthdate DATE)";
         $conn->query($sql);
         
         echo "<h3>Таблица создана.</h3>";
