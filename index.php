@@ -1,18 +1,20 @@
 <?php
 
-$dbc = mysqli_connect('localhost', 'root', '', 'insurance');
+require_once('db.php');
 
 if (!isset($_COOKIE['user_id'])) {
   if (isset($_POST['submit'])) {
-    $user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));
-    $user_password = mysqli_real_escape_string($dbc, trim($_POST['password']));
+    $user_username = $_POST['username'];
+    $user_password = $_POST['password'];
 
     if (!empty($user_username) && !empty($user_password)) {
-      $query = "SELECT 'user_id', 'username' FROM `signup` WHERE username = '$user_username' AND password = SHA('$user_password')";
-      $data = mysqli_query($dbc, $query);
+      $sql_select = "SELECT 'user_id', 'username' FROM `signup` WHERE username = '$user_username' AND password = '$user_password'";
+      $stmt = $conn->query($sql_select);
+      $stmt->execute();
+      $data = $stmt->fetchAll();
 
-      if (mysqli_num_rows($data) == 1) {
-        $row = mysqli_fetch_assoc($data);
+      if(count($data) == 1) {
+        $row = $data
         setcookie('user_id', $row['user_id'], time() + (60*60*24*30));
         setcookie('username', $row['username'], time() + (60*60*24*30));
         $home_url = 'http://' . $_SERVER['HTTP_HOST'];
