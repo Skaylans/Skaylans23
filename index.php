@@ -33,9 +33,6 @@ if (!isset($_COOKIE['id'])) {
  ?>
 
 
-
-
-
 <!DOCTYPE html>
 <html>
   <head>
