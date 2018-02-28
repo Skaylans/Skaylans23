@@ -2,20 +2,20 @@
 
 require_once('db.php');
 
-if (!isset($_COOKIE['user_id'])) {
+if (!isset($_COOKIE['id'])) {
   if (isset($_POST['submit'])) {
     $user_username = $_POST['username'];
     $user_password = $_POST['password'];
 
     if (!empty($user_username) && !empty($user_password)) {
-      $sql_select = "SELECT 'user_id', 'username' FROM `signup` WHERE username = '$user_username' AND password = '$user_password'";
+      $sql_select = "SELECT 'id', 'username' FROM signup WHERE username = '$user_username' AND password = '$user_password'";
       $stmt = $conn->query($sql_select);
       $stmt->execute();
       $data = $stmt->fetchAll();
 
       if(count($data) == 1) {
         //$row = $data
-        setcookie('user_id', $row['user_id'], time() + (60*60*24*30));
+        setcookie('id', $row['id'], time() + (60*60*24*30));
         setcookie('username', $row['username'], time() + (60*60*24*30));
         $home_url = 'http://' . $_SERVER['HTTP_HOST'];
         header('Location: '. $home_url);
