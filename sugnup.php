@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $password_1 = $_POST['password-1'];
     $password_2 = $_POST['password-2'];
     $email = $_POST['email'];
-    $birth_date = $_POST['birthdate'];
+    //$birth_date = $_POST['birthdate'];
 
     if (!empty($username) && !empty($password_1) && !empty($password_2) && ($password_1 == $password_2)) {
       $sql_select = "SELECT * FROM signup WHERE username = '$username'";
@@ -16,12 +16,12 @@ if (isset($_POST['submit'])) {
       $data = $stmt->fetchAll();
 
       if(count($data) == 0) {
-        $sql_insert = "INSERT INTO signup (username, password, email, birthdate) VALUES (?,?,?,?)";
+        $sql_insert = "INSERT INTO signup (username, password, email) VALUES (?,?,?)";
         $stmt = $conn->prepare($sql_insert);
         $stmt->bindValue(1, $username);
         $stmt->bindValue(2, $password_1);
         $stmt->bindValue(3, $email);
-        $stmt->bindValue(4, $birth_date);
+        //$stmt->bindValue(4, $birth_date);
         $stmt->execute();
 
         echo 'Вы зарегистрированны!';
@@ -52,7 +52,6 @@ if (isset($_POST['submit'])) {
           <input type="password" name="password-1" placeholder="Придумайте пароль">
           <input type="password" name="password-2" placeholder="Введите пароль еще раз">
           <input type="text" name="email" placeholder="Ваш email...">
-          <input type="text" name="birthdate" placeholder="Дата рождения">
         </div>
         <input class="dws-submit" type="submit" name="submit" value="Регистрация">
       </form>
