@@ -14,9 +14,8 @@ if (!isset($_COOKIE['id'])) {
       $data = $stmt->fetchAll();
 
       if(count($data) == 1) {
-        //$row = $data
-        setcookie('id', $row['id'], time() + (60*60*24*30));
-        setcookie('username', $row['username'], time() + (60*60*24*30));
+        setcookie('id', $data['id'], time() + (60*60*24*30));
+        setcookie('username', $data['username'], time() + (60*60*24*30));
         $home_url = 'http://' . $_SERVER['HTTP_HOST'];
         header('Location: '. $home_url);
       }
