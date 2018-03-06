@@ -31,9 +31,9 @@ require_once('db.php');
   </head>
   <body>
     <div class="container">
-      <?php
+   /*   <?php
       if (empty( $_SESSION["username"])) {
-       ?>
+       ?> */
 
       <img src="img/lock.png">
       <form class="" action="index.php" method="post">
@@ -48,10 +48,11 @@ require_once('db.php');
         <a href="\sugnup.php">Регистрация</a>
       </form>
 
-    <?php
+   /* <?php
     }
-    else {
+  //  else { 
       ?>
+   
 
   <p><a href="\index.php">Мой профиль</a></p>
   <p><a href="\exit.php">Выйти</a></p>
@@ -59,7 +60,7 @@ require_once('db.php');
 <?php
 }
  ?>
-
+*/
     </div>
   </body>
 </html>
