@@ -41,8 +41,6 @@ if (isset($_POST['submit'])) {
             $stmt->execute();
             
             echo '<div style= "color: white;">Вы зарегистрированны!</div><hr>';
-            
-            exit();
         }
         else {
             echo '<div style = "color: red;">Такой пользователь уже существует!</div><hr>';
