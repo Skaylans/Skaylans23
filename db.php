@@ -12,4 +12,6 @@ catch (Exception $ex) {
     echo 'Не связанный '.$ex->getMessage();
 }
 
+session_start(); 
+
  ?>
