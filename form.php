@@ -32,6 +32,17 @@
         <div class="middlename-box-one">
           <input type="text" name="middlename" placeholder="Отчество">
         </div>
-      </form>
+        <div class="gender-box">
+          <div class="gender-box-one"><span><lable>Ваш пол</lable></span></div>
+          <div class="gender-man">
+            <div class="gender-box-sex"><span><lable>Мужской</lable></span></div>
+            <input type="radio" name="man" placeholder="Мужчина">
+          </div>
+          <div class="gender-woman">
+            <div class="gender-box-sex"><span><lable>Женский</lable></span></div>
+            <input type="radio" name="woman" placeholder="Женский">
+          </div>
+        </div>
+    </form>
   </body>
 </html>
