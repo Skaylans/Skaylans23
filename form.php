@@ -7,8 +7,6 @@
     <title>Страхование жизни</title>
   </head>
   <body>
-    <div class="container">
-      <img src="img/lock.png">
       <form class="" action="index.php" method="post">
         <div class="insured-box"><span><lable>Страхователь</lable></span></div>
         <div class="phone-box"><span><lable>Мобильный телефон</lable></span></div>
@@ -32,7 +30,5 @@
           <input type="text" name="middlename" placeholder="Отчество">
         </div>
       </form>
-
-    </div>
   </body>
 </html>
