@@ -9,14 +9,17 @@
   <body>
       <form class="" action="index.php" method="post">
         <div class="insured-box"><span><lable>Страхователь</lable></span></div><hr><br>
-        <div class="phone-box"><span><lable>Мобильный телефон</lable></span></div>
-        <div class="phone-box-one">
-          <input type="text" name="phone" placeholder="Введите номер телефона">
+        <div class="info-insured">
+          <div class="phone-box"><span><lable>Мобильный телефон</lable></span></div>
+          <div class="phone-box-one">
+            <input type="text" name="phone" placeholder="Введите номер телефона">
+          </div>
+          <div class="email-box"><span><lable>E-mail</lable></span></div>
+          <div class="email-box-one">
+            <input type="text" name="email" placeholder="Введите E-mail...">
+          </div>
         </div>
-        <div class="email-box"><span><lable>E-mail</lable></span></div>
-        <div class="email-box-one">
-          <input type="text" name="email" placeholder="Введите E-mail...">
-        </div>
+        
         <div class="last_name-box"><span><lable>Фамилия</lable></span></div>
         <div class="last_name-box-one">
           <input type="text" name="phone" placeholder="Фамилия">
