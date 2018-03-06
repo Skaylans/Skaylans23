@@ -9,6 +9,8 @@ if (isset($_POST['submit'])) {
     $password_2 = $_POST['password-2'];
     $email = $_POST['email'];
     
+    /*
+    
     $err = array();
     if($username = '') {
         $err[] = 'Поле логин незаполненно!';  
@@ -22,7 +24,7 @@ if (isset($_POST['submit'])) {
     elseif($password_1 != $password_2) {
         $err[] = 'Неправельно заполнен пароль-2!';
     }
-    
+    */
     
     if(empty($err)) {
         $sql_select = "SELECT * FROM signup WHERE username = '$username'";
