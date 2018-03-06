@@ -2,32 +2,21 @@
 
 require_once('db.php');
 
-if (!isset($_COOKIE['id'])) {
   if (isset($_POST['submit'])) {
     $user_username = $_POST['username'];
     $user_password = $_POST['password'];
 
     if (!empty($user_username) && !empty($user_password)) {
+      $_SESSION["username"] = $user_username;
       $sql_select = "SELECT 'id', 'username' FROM signup WHERE username = '$user_username' AND password = '$user_password'";
       $stmt = $conn->query($sql_select);
       $stmt->execute();
       $data = $stmt->fetchAll();
-
-      if(count($data) == 1) {
-        setcookie('id', $data['id'], time() + (60*60*24*30));
-        setcookie('username', $data['username'], time() + (60*60*24*30));
-        $home_url = 'http://' . $_SERVER['HTTP_HOST'];
-        header('Location: '. $home_url);
-      }
-      else {
-        echo 'Неправельное имя пользователя или пароль';
-      }
     }
     else {
       echo 'Поля заполнены неправельно';
     }
   }
-}
 
  ?>
 
@@ -43,7 +32,7 @@ if (!isset($_COOKIE['id'])) {
   <body>
     <div class="container">
       <?php
-      if (empty($_COOKIE['username'])) {
+      if (empty( $_SESSION["username"])) {
        ?>
 
       <img src="img/lock.png">
