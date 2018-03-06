@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
         }
     }
     else {
-        //echo '<div style="red";>'.array.shift($err).'</div><hr>'; 
+        echo '<div style="red";>'.array.shift($err)'</div><hr>'; 
     }
 }
 ?>
