@@ -45,9 +45,9 @@ if (isset($_POST['submit'])) {
         else {
             echo '<div style="red";>Такой пользователь уже существует!</div><hr>';
         }
-        else {
-            echo '<div style="red";>'.array.shift($err).'</div><hr>'; 
-        }
+    }
+    else {
+        echo '<div style="red";>'.array.shift($err).'</div><hr>'; 
     }
 }
 ?>
