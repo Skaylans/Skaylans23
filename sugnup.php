@@ -38,15 +38,15 @@ if (isset($_POST['submit'])) {
             $stmt->bindValue(3, $email);
             $stmt->execute();
             
-            echo '<div style="red";>Вы зарегистрированны!</div>';
+            echo '<div style="red";>Вы зарегистрированны!</div><hr>';
             
             exit();
         }
         else {
-            echo '<div style="red";>Такой пользователь уже существует!</div>';
+            echo '<div style="red";>Такой пользователь уже существует!</div><hr>';
         }
         else {
-            echo '<div style="red";>'.array.shift($err).'</div>'; 
+            echo '<div style="red";>'.array.shift($err).'</div><hr>'; 
         }
     }
 }
