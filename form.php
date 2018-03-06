@@ -8,7 +8,7 @@
   </head>
   <body>
       <form class="" action="index.php" method="post">
-        <div class="insured-box"><span><lable>Страхователь</lable></span></div>
+        <div class="insured-box"><span><lable>Страхователь</lable></span></div><hr><br>
         <div class="phone-box"><span><lable>Мобильный телефон</lable></span></div>
         <div class="phone-box-one">
           <input type="text" name="phone" placeholder="Введите номер телефона">
