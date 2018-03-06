@@ -40,16 +40,16 @@ if (isset($_POST['submit'])) {
             $stmt->bindValue(3, $email);
             $stmt->execute();
             
-            echo '<div style= color: "white";>Вы зарегистрированны!</div><hr>';
+            echo '<div style= "color: white;">Вы зарегистрированны!</div><hr>';
             
             exit();
         }
         else {
-            echo '<div style= color: "red";>Такой пользователь уже существует!</div><hr>';
+            echo '<div style = "color: red;">Такой пользователь уже существует!</div><hr>';
         }
     }
     else {
-        echo '<div style= color: "red";>'.array_shift($err).'</div><hr>'; 
+        echo '<div style = "color: red;">'.array_shift($err).'</div><hr>'; 
     }
 }
 ?>
