@@ -53,7 +53,7 @@ require_once('db.php');
     else {
       ?>
 
-  <p><a href="#">Мой профиль</a></p>
+  <p><a href="\index.php">Мой профиль</a></p>
   <p><a href="\exit.php">Выйти</a></p>
 
 <?php
