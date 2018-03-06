@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     }
 
     
-    //if(empty($err)) {
+    if(empty($err)) {
         $sql_select = "SELECT * FROM signup WHERE username = '$username'";
         $stmt = $conn->query($sql_select);
         $stmt->execute();
@@ -47,10 +47,10 @@ if (isset($_POST['submit'])) {
         else {
             echo '<div style="red";>Такой пользователь уже существует!</div><hr>';
         }
-    //}
-   // else {
-    //    echo '<div style="red";>'.array.shift($err).'</div><hr>'; 
-  //  }
+    }
+    else {
+        //echo '<div style="red";>'.array.shift($err).'</div><hr>'; 
+    }
 }
 ?>
 
