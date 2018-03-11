@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "sqlsrv:server = tcp:safelife.database.windows.net,1433; Database = insurance";
+$dsn = "sqlsrv:server = tcp:safelife.database.windows.net,1433; Database = Insurance";
 $login = "Romanow";
 $pass = "Qwerty123456";
 
